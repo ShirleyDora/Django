@@ -7,9 +7,10 @@
         <form method="post" action="/login_action/" >
             <input type="text" name ="username" placeholder="username"><br>
             <input type="password" name="password" placeholder="password"><br>
+            {{error}}<br>
             <button id="btn" type="submit">登录</button>
             {% csrf_token %} 
             <!-- 添加跨站请求伪造CSRF -->
         </form>
     </body>
-</html>w
+</html>
