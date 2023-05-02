@@ -1,0 +1,102 @@
+E:\django\guest>python manage.py migrate
+Operations to perform:
+  Apply all migrations: admin, auth, contenttypes, sessions
+Running migrations:
+  Applying contenttypes.0001_initial... OK
+  Applying auth.0001_initial... OK
+  Applying admin.0001_initial... OK
+  Applying admin.0002_logentry_remove_auto_add... OK
+  Applying contenttypes.0002_remove_content_type_name... OK
+  Applying auth.0002_alter_permission_name_max_length... OK
+  Applying auth.0003_alter_user_email_max_length... OK
+  Applying auth.0004_alter_user_username_opts... OK
+  Applying auth.0005_alter_user_last_login_null... OK
+  Applying auth.0006_require_contenttypes_0002... OK
+  Applying auth.0007_alter_validators_add_error_messages... OK
+  Applying auth.0008_alter_user_username_max_length... OK
+  Applying sessions.0001_initial... OK
+
+
+E:\django\guest>python manage.py createsuperuser
+Username (leave blank to use 'shirley'): admin
+Email address: 565914036@qq.com
+Password:
+Password (again):
+Superuser created successfully.
+
+E:\django\guest>python manage.py makemigrations sign
+Migrations for 'sign':
+  sign\migrations\0001_initial.py:
+    - Create model Event
+    - Create model Guest
+    - Alter unique_together for guest (1 constraint(s))
+
+E:\django\guest>python manage.py migrate
+Operations to perform:
+  Apply all migrations: admin, auth, contenttypes, sessions, sign
+Running migrations:
+  Applying sign.0001_initial... OK
+
+E:\django\guest>python manage.py shell
+Python 3.5.2 (v3.5.2:4def2a2901a5, Jun 25 2016, 22:18:55) [MSC v.1900 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license" for more information.
+(InteractiveConsole)
+>>> from sign.models import Event,Guest
+>>> Event.objects.all()
+<QuerySet [<Event: 小米发布会>]>
+>>> Guest.objects.all()
+<QuerySet [<Guest: Shirley>]>
+>>> table.objects.all()
+Traceback (most recent call last):
+  File "<console>", line 1, in <module>
+NameError: name 'table' is not defined
+>>> from datetime import datetime
+>>> el = Event(id=2,name="红米pro发布会",limit=2000,status=True,address="北京",start_time=datetime(2023,5,2,12,15,00))
+>>> el.save()
+1.插入数据
+D:\Program Files\Python\Python35\lib\site-packages\django\db\models\fields\__init__.py:1430: RuntimeWarning: DateTimeField Event.start_time received a naive datetime (2023-05-02 12:15:00) while time zone support is active.
+  RuntimeWarning)
+E:\django\guest>python manage.py shell
+Python 3.5.2 (v3.5.2:4def2a2901a5, Jun 25 2016, 22:18:55) [MSC v.1900 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license" for more information.
+(InteractiveConsole)
+>>> from sign.models import Event,Guest
+>>> from datetime import datetime
+>>> Event.objects.create(id=3,name='红米MAX发布会',limit=2000,status=True,address='上海会展中心',start_time=datetime(2023,5,1,14,0,0))
+<Event: 红米MAX发布会>
+>>> Guest.objects.create(realname='shirley',phone=11111111111,email='shirley@email.com',sign=False,event_id=3)
+<Guest: shirley>
+2.查询数据
+>>> el = Event.objects.get(name='红米MAX发布会')
+>>> el
+<Event: 红米MAX发布会>
+>>> el.address
+'上海会展中心'
+>>> el.start_time
+datetime.datetime(2023, 5, 1, 14, 0)
+>>> Event.objects.get(name='红米MAX发布会').status
+True
+>>> Event.objects.get(name='红米MAX发布会').limit
+2000
+>>> Event.objects.get(name='红米MAX发布会').address
+'上海会展中心'
+>>> e2 = Event.objects.filter(name__contains='发布会')
+>>> e2
+<QuerySet [<Event: 小米发布会>, <Event: 红米pro发布会>, <Event: 红米MAX发布会>]>
+>>> g1 = Guest.objects.get(phone='15071206441')
+>>> g1.event
+<Event: 红米MAX发布会>
+>>> g1.event.name
+'红米MAX发布会'
+>>> g1.event.address
+'上海会展中心'
+3.删除数据
+>>> g2 = Guest.objects.get(phone='15071206441')
+>>> g2.delete()
+(1, {'sign.Guest': 1})
+4.更新数据
+>>> g3 =Guest.objects.get(phone='11111111111')
+>>> g3.realname='shirley2'
+>>> g3.save()
+>>> Guest.objects.select_for_update().filter(phone='11111111111').update(phone='15071206441')
+1
