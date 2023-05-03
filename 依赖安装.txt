@@ -1,0 +1,16 @@
+E:\django>pip install django-bootstrap3==12.0.0
+Collecting django-bootstrap3==12.0.0
+  Downloading https://files.pythonhosted.org/packages/68/57/3cf3b971aabaf4c32fda6db861941529e705894820703cf8e6ef0c5459e8/django_bootstrap3-12.0.0-py3-none-any.whl
+Installing collected packages: django-bootstrap3
+Successfully installed django-bootstrap3-12.0.0
+You are using pip version 8.1.1, however version 23.1.2 is available.
+You should consider upgrading via the 'python -m pip install --upgrade pip' command.
+
+E:\django\guest>pip install pymysql==0.10.0
+Collecting pymysql==0.10.0
+  Downloading https://files.pythonhosted.org/packages/2c/57/af502e0e113f139b3f3add4f1efba899a730a365d2264d476e85b9591da5/PyMySQL-0.10.0-py2.py3-none-any.whl (47kB)
+    100% |████████████████████████████████| 51kB 115kB/s
+Installing collected packages: pymysql
+Successfully installed pymysql-0.10.0
+You are using pip version 8.1.1, however version 23.1.2 is available.
+You should consider upgrading via the 'python -m pip install --upgrade pip' command.

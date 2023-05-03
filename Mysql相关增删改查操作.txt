@@ -1,0 +1,84 @@
+E:\django>mysql -u root -p
+Enter password: ******
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 18
+Server version: 8.0.33 MySQL Community Server - GPL
+
+Copyright (c) 2000, 2023, Oracle and/or its affiliates.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql> show databases;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| mysql              |
+| performance_schema |
+| sakila             |
+| sys                |
+| world              |
++--------------------+
+6 rows in set (0.07 sec)
+1.创建guest数据库
+mysql> CREATE DATABASE guest CHARACTER SET utf8;
+Query OK, 1 row affected, 1 warning (0.07 sec)
+2.查看当前库与表
+mysql> show tables;
+Empty set (0.07 sec)
+
+mysql> show databases;
++--------------------+
+| Database           |
++--------------------+
+| guest              |
+| information_schema |
+| mysql              |
+| performance_schema |
+| sakila             |
+| sys                |
+| world              |
++--------------------+
+7 rows in set (0.00 sec)
+mysql> use guest;
+Database changed
+mysql> show tables;
+Empty set (0.00 sec)
+3.查看MySQL端口号
+mysql> show global variables like 'port';
++---------------+-------+
+| Variable_name | Value |
++---------------+-------+
+| port          | 3306  |
++---------------+-------+
+1 row in set, 1 warning (0.01 sec)
+4.迁移数据库同步（SQLite3->MySQL)
+E:\django\guest>python manage.py migrate
+Operations to perform:
+  Apply all migrations: admin, auth, contenttypes, sessions, sign
+Running migrations:
+  Applying contenttypes.0001_initial... OK
+  Applying auth.0001_initial... OK
+  Applying admin.0001_initial... OK
+  Applying admin.0002_logentry_remove_auto_add... OK
+  Applying contenttypes.0002_remove_content_type_name... OK
+  Applying auth.0002_alter_permission_name_max_length... OK
+  Applying auth.0003_alter_user_email_max_length... OK
+  Applying auth.0004_alter_user_username_opts... OK
+  Applying auth.0005_alter_user_last_login_null... OK
+  Applying auth.0006_require_contenttypes_0002... OK
+  Applying auth.0007_alter_validators_add_error_messages... OK
+  Applying auth.0008_alter_user_username_max_length... OK
+  Applying sessions.0001_initial... OK
+  Applying sign.0001_initial... OK
+5.Admin后台超级管理员账号重建
+E:\django\guest>python manage.py createsuperuser
+Username (leave blank to use 'shirley'): admin
+Email address: admin@mail.com
+Password:
+Password (again):
+Superuser created successfully.

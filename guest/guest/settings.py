@@ -21,6 +21,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'sign',
+    'bootstrap3',
 ]
 
 MIDDLEWARE = [
@@ -61,6 +62,20 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+    }
+}
+# 替换mysql
+DATABASES = {
+    'default':{
+         'ENGINE': 'django.db.backends.mysql', #驱动
+        'HOST': '127.0.0.1', #主机地址
+        'PORT': '3306', #端口号
+        'NAME': 'guest', #数据库
+        'USER': 'root', #登录用户名
+        'PASSWORD': '123456', #登录密码
+        'OPTIONS': {
+            'init_command': "SET sql_mode='STRICT_TRANS_TABLES'",
+        },
     }
 }
 
