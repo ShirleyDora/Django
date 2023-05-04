@@ -1,6 +1,6 @@
 # from django.http import HttpResponse
 from django.http import HttpResponse, HttpResponseRedirect
-from django.shortcuts import render
+from django.shortcuts import get_object_or_404, render
 from django.contrib import auth
 from django.contrib.auth.decorators import login_required
 from sign.models import Event,Guest
@@ -67,3 +67,8 @@ def guest_manage(request):
         #如果page不在范围，取最后一页面
         contacts = paginator.page(paginator.num_pages)
     return render(request,"guest_manage.html",{"user":username,"guests":contacts})
+# 签到页面
+@login_required
+def sign_index(request,eid):
+    event = get_object_or_404(Event,id=eid)
+    return render(request,'sign_index.html',{'event':event})
