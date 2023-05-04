@@ -103,4 +103,9 @@ def sign_index_action(request,eid):
 get方法是从数据库的取得一个匹配的结果，返回一个对象，如果记录不存在的话，它会报错。
 filter方法是从数据库的取得匹配的结果，返回一个对象列表，如果记录不存在的话，它会返回[]。
 '''
-    
+# 退出登录
+@login_required
+def logout(request):
+    auth.logout(request) #退出登录
+    response = HttpResponseRedirect('/index/')
+    return response
