@@ -1,0 +1,48 @@
+Microsoft Windows [版本 10.0.19044.2846]
+(c) Microsoft Corporation。保留所有权利。
+
+E:\django\guest>python manage.py shell
+Python 3.5.2 (v3.5.2:4def2a2901a5, Jun 25 2016, 22:18:55) [MSC v.1900 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license" for more information.
+(InteractiveConsole)
+>>> from django.core.paginator import Paginator
+>>> from sign.models import Guest
+>>> guest_list = Guest.objects.all()
+>>> p = Paginator(guest_list,2)
+>>> p.count
+5
+>>> p.page_range
+range(1, 4)
+>>> page1 = p.page(1)
+>>> page1
+<Page 1 of 3>
+>>> page1.object_list
+<QuerySet [<Guest: Shirley>, <Guest: Shirley2>]>
+>>> for g in page1:
+...     g.realname
+...
+'Shirley'
+'Shirley2'
+>>> page2 = p.page(2)
+>>> page2.start_index()
+3
+>>> page2.end_index()
+4
+>>> page2.has_previous()
+True
+>>> page2.has_next()
+True
+>>> page2.previous_page_number()
+1
+>>> page2.next_page_number()
+3
+>>> page3 = p.page(3)
+>>> page3.has_next()
+False
+>>> page3.has_previous()
+True
+>>> page3.has_other_pages()
+True
+>>> page3.previous_page_number()
+2
+>>>

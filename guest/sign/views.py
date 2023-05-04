@@ -4,6 +4,7 @@ from django.shortcuts import render
 from django.contrib import auth
 from django.contrib.auth.decorators import login_required
 from sign.models import Event,Guest
+from django.core.paginator import Paginator,EmptyPage,PageNotAnInteger
 
 # Create your views here.
 def index(request):
@@ -55,4 +56,14 @@ def search_name(request):
 def guest_manage(request):
     username = request.session.get('user','')
     guest_list = Guest.objects.all()
-    return render(request,"guest_manage.html",{"user":username,"guests":guest_list})
+    paginator = Paginator(guest_list,2)
+    page = request.GET.get('page')
+    try:
+        contacts = paginator.page(page)
+    except PageNotAnInteger:
+        #如果page不是整数，取第一页面数据
+        contacts = paginator.page(1)
+    except EmptyPage:
+        #如果page不在范围，取最后一页面
+        contacts = paginator.page(paginator.num_pages)
+    return render(request,"guest_manage.html",{"user":username,"guests":contacts})
