@@ -72,3 +72,35 @@ def guest_manage(request):
 def sign_index(request,eid):
     event = get_object_or_404(Event,id=eid)
     return render(request,'sign_index.html',{'event':event})
+# 签到动作
+@login_required
+def sign_index_action(request,eid):
+    event = get_object_or_404(Event, id=eid)
+    guest_list = Guest.objects.filter(event_id=eid)
+    guest_data = str(len(guest_list))
+    sign_data = 0   #计算发布会“已签到”的数量
+    for guest in guest_list:
+        if guest.sign == True:
+            sign_data += 1
+    phone =  request.POST.get('phone','')
+    result = Guest.objects.filter(phone = phone)
+    if not result:
+        return render(request, 'sign_index.html', {'event': event,'hint': 'phone error.','guest':guest_data,'sign':sign_data})
+    result = Guest.objects.filter(phone = phone,event_id = eid)
+    if not result:
+        return render(request, 'sign_index.html', {'event': event,'hint': 'event id or phone error.','guest':guest_data,'sign':sign_data})
+    result = Guest.objects.get(event_id = eid,phone = phone)
+    if result.sign:
+        return render(request, 'sign_index.html', {'event': event,'hint': "user has sign in.",'guest':guest_data,'sign':sign_data})
+    else:
+        Guest.objects.filter(event_id = eid,phone = phone).update(sign = '1')
+        return render(request, 'sign_index.html', {'event': event,'hint':'sign in success!',
+            'user': result,
+            'guest':guest_data,
+            'sign':str(int(sign_data)+1)
+            })
+'''
+get方法是从数据库的取得一个匹配的结果，返回一个对象，如果记录不存在的话，它会报错。
+filter方法是从数据库的取得匹配的结果，返回一个对象列表，如果记录不存在的话，它会返回[]。
+'''
+    
