@@ -3,7 +3,7 @@ from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import render
 from django.contrib import auth
 from django.contrib.auth.decorators import login_required
-from sign.models import Event
+from sign.models import Event,Guest
 
 # Create your views here.
 def index(request):
@@ -50,3 +50,9 @@ def search_name(request):
     search_name = request.GET.get("name","")
     event_list = Event.objects.filter(name__contains=search_name)
     return render(request,"event_manage.html",{"user":username,"events":event_list})
+# 嘉宾管理
+@login_required
+def guest_manage(request):
+    username = request.session.get('user','')
+    guest_list = Guest.objects.all()
+    return render(request,"guest_manage.html",{"user":username,"guests":guest_list})
