@@ -1,18 +1,5 @@
-<html lang="zh-CN">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
-        <meta name="description" content="">
-        <meta name="author" content="">
-        <!-- Bootstrap core CSS -->
-        <link href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
-        <!-- Custom styles for this template -->
-        <link href="//v3.bootcss.com/examples/theme/theme.css" rel="stylesheet">
-        <title>Guest Manage System</title>
-    </head>
-    <body>
+{% extends "base.html" %}
+{% block content %}
         <!-- 导航栏 -->
         <nav class="navbar navbar-inverse navbar-fixed-top">
             <div class="container">
@@ -32,8 +19,19 @@
             </div>
         </nav>
         <div class="container theme-showcase" role="main">
+            <!--嘉宾搜索功能-->
+            <div class="page-header" style="padding-top:60px;">
+                <div class="navbar-collapse collapse" id="navbar">
+                    <form action="/search_phone/" class="navbar-form" method="get">
+                        <div class="form-group">
+                            <input name="phone" type="text" class="form-control" placeholder="手机号">
+                        </div>
+                        <button class="btn btn-success" type="submit">搜索</button>
+                    </form>
+                </div>
+            </div>
             <!-- 嘉宾列表 -->
-            <div class="row" style="padding-top:80px;">
+            <div class="row">
                 <div class="col-md-14">
                     <table class="table table-striped">
                         <thead>
@@ -64,17 +62,23 @@
             <!-- 列表分页器 -->
             <div class="pagination">
                 <span class="step-links">
-                    {% if guests.has_previous %}
-                    <a href="?page={{ guests.previous_page_number }}">previous</a>
+                  {% if guests.has_previous %}
+                    {% if phone %}
+                      <a href="?phone={{ phone }}&page={{ guests.previous_page_number }}">previous</a>
+                    {% else %}
+                      <a href="?page={{ guests.previous_page_number }}">previous</a>
                     {% endif %}
+                  {% endif %}
                     <span class="current">
-                        Page {{ guests.number }} of {{ guests.paginator.num_pages }}.
+                      Page {{ guests.number }} of {{ guests.paginator.num_pages }}.
                     </span>
-                    {% if guests.has_next %}
-                    <a href="?page={{ guests.next_page_number }}">next</a>
+                  {% if guests.has_next %}
+                    {% if phone %}
+                      <a href="?phone={{ phone }}&page={{ guests.next_page_number }}">next</a>
+                    {% else %}
+                      <a href="?page={{ guests.next_page_number }}">next</a>
                     {% endif %}
+                  {% endif %}
                 </span>
             </div>
-        </div>
-    </body>
-</html>
+{% endblock %}
