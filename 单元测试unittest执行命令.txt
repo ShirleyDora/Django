@@ -1,0 +1,20 @@
+E:\django\guest>python manage.py test
+Creating test database for alias 'default'...
+..
+----------------------------------------------------------------------
+Ran 2 tests in 0.170s
+
+OK
+Destroying test database for alias 'default'...
+1.最基础
+python manage.py test
+2.运行sign应用下所有测试用例
+python manage.py test sign
+3.运行sign应用下的tests.py测试文件
+python manage.py test sign.tests
+4.运行sign应用tests.py测试文件下的ModelTest测试类
+python manage.py test sign.tests.ModelTest
+5.执行ModelTest测试类下的test_event_models测试方法。
+python manage.py test sign.tests.ModelTest.test_event_models
+6.用-p(或-pattern)参数模糊匹配测试文件。
+python manage.py test -p test*.py

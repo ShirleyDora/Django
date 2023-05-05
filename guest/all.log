@@ -46,3 +46,91 @@
 [2023-05-05 00:53:27,676] [INFO] basehttp : "GET /sign_index2/2/ HTTP/1.1" 200 1572
 [2023-05-05 00:53:42,468] [WARNING] basehttp : "POST /api/user_sign/ HTTP/1.1" 404 3373
 [2023-05-05 00:53:42,468] [WARNING] basehttp : "POST /api/user_sign/ HTTP/1.1" 404 3373
+[2023-05-05 23:46:16,194] [ERROR] exception : Internal Server Error: /sign_index_action/1/
+Traceback (most recent call last):
+  File "D:\Program Files\Python\Python35\lib\site-packages\django\core\handlers\exception.py", line 39, in inner
+    response = get_response(request)
+  File "D:\Program Files\Python\Python35\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\Program Files\Python\Python35\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Program Files\Python\Python35\lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+TypeError: sign_index_action() got an unexpected keyword argument 'eid'
+[2023-05-05 23:46:16,194] [ERROR] exception : Internal Server Error: /sign_index_action/1/
+Traceback (most recent call last):
+  File "D:\Program Files\Python\Python35\lib\site-packages\django\core\handlers\exception.py", line 39, in inner
+    response = get_response(request)
+  File "D:\Program Files\Python\Python35\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\Program Files\Python\Python35\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Program Files\Python\Python35\lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+TypeError: sign_index_action() got an unexpected keyword argument 'eid'
+[2023-05-05 23:46:16,736] [ERROR] exception : Internal Server Error: /sign_index_action/2/
+Traceback (most recent call last):
+  File "D:\Program Files\Python\Python35\lib\site-packages\django\core\handlers\exception.py", line 39, in inner
+    response = get_response(request)
+  File "D:\Program Files\Python\Python35\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\Program Files\Python\Python35\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Program Files\Python\Python35\lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+TypeError: sign_index_action() got an unexpected keyword argument 'eid'
+[2023-05-05 23:46:16,736] [ERROR] exception : Internal Server Error: /sign_index_action/2/
+Traceback (most recent call last):
+  File "D:\Program Files\Python\Python35\lib\site-packages\django\core\handlers\exception.py", line 39, in inner
+    response = get_response(request)
+  File "D:\Program Files\Python\Python35\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\Program Files\Python\Python35\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Program Files\Python\Python35\lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+TypeError: sign_index_action() got an unexpected keyword argument 'eid'
+[2023-05-05 23:46:16,976] [ERROR] exception : Internal Server Error: /sign_index_action/1/
+Traceback (most recent call last):
+  File "D:\Program Files\Python\Python35\lib\site-packages\django\core\handlers\exception.py", line 39, in inner
+    response = get_response(request)
+  File "D:\Program Files\Python\Python35\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\Program Files\Python\Python35\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Program Files\Python\Python35\lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+TypeError: sign_index_action() got an unexpected keyword argument 'eid'
+[2023-05-05 23:46:16,976] [ERROR] exception : Internal Server Error: /sign_index_action/1/
+Traceback (most recent call last):
+  File "D:\Program Files\Python\Python35\lib\site-packages\django\core\handlers\exception.py", line 39, in inner
+    response = get_response(request)
+  File "D:\Program Files\Python\Python35\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\Program Files\Python\Python35\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Program Files\Python\Python35\lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+TypeError: sign_index_action() got an unexpected keyword argument 'eid'
+[2023-05-05 23:46:17,203] [ERROR] exception : Internal Server Error: /sign_index_action/2/
+Traceback (most recent call last):
+  File "D:\Program Files\Python\Python35\lib\site-packages\django\core\handlers\exception.py", line 39, in inner
+    response = get_response(request)
+  File "D:\Program Files\Python\Python35\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\Program Files\Python\Python35\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Program Files\Python\Python35\lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+TypeError: sign_index_action() got an unexpected keyword argument 'eid'
+[2023-05-05 23:46:17,203] [ERROR] exception : Internal Server Error: /sign_index_action/2/
+Traceback (most recent call last):
+  File "D:\Program Files\Python\Python35\lib\site-packages\django\core\handlers\exception.py", line 39, in inner
+    response = get_response(request)
+  File "D:\Program Files\Python\Python35\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\Program Files\Python\Python35\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Program Files\Python\Python35\lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+TypeError: sign_index_action() got an unexpected keyword argument 'eid'
