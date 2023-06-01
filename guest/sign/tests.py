@@ -32,7 +32,7 @@ class LoginActionTest(TestCase):
     # 用户名密码为空
     def test_login_action_username_password_null(self):
         test_data = {'username':'','password':''}
-        response = self.client.post('/login_action/',data = test_data)
+        response = self.client.post('/login_action/',data=test_data)
         self.assertEqual(response.status_code,200)
         self.assertIn(b"username or password error!",response.content)
     # 用户名密码错误

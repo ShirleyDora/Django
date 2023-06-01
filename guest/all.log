@@ -134,3 +134,135 @@ Traceback (most recent call last):
   File "D:\Program Files\Python\Python35\lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapped_view
     return view_func(request, *args, **kwargs)
 TypeError: sign_index_action() got an unexpected keyword argument 'eid'
+[2023-05-05 23:52:22,467] [INFO] basehttp : "GET /index/ HTTP/1.1" 200 2119
+[2023-05-05 23:52:22,467] [INFO] basehttp : "GET /index/ HTTP/1.1" 200 2119
+[2023-05-05 23:52:36,201] [WARNING] basehttp : "GET /favicon.ico HTTP/1.1" 404 3363
+[2023-05-05 23:52:36,201] [WARNING] basehttp : "GET /favicon.ico HTTP/1.1" 404 3363
+[2023-05-06 00:04:04,500] [INFO] basehttp : "GET /admin/ HTTP/1.1" 302 0
+[2023-05-06 00:04:04,500] [INFO] basehttp : "GET /admin/ HTTP/1.1" 302 0
+[2023-05-06 00:04:04,672] [INFO] basehttp : "GET /admin/login/?next=/admin/ HTTP/1.1" 200 1811
+[2023-05-06 00:04:04,672] [INFO] basehttp : "GET /admin/login/?next=/admin/ HTTP/1.1" 200 1811
+[2023-05-06 00:04:05,135] [INFO] basehttp : "GET /static/admin/css/base.css HTTP/1.1" 304 0
+[2023-05-06 00:04:05,135] [INFO] basehttp : "GET /static/admin/css/base.css HTTP/1.1" 304 0
+[2023-05-06 00:04:05,288] [INFO] basehttp : "GET /static/admin/css/login.css HTTP/1.1" 304 0
+[2023-05-06 00:04:05,288] [INFO] basehttp : "GET /static/admin/css/login.css HTTP/1.1" 304 0
+[2023-05-06 00:04:05,619] [INFO] basehttp : "GET /static/admin/css/fonts.css HTTP/1.1" 304 0
+[2023-05-06 00:04:05,619] [INFO] basehttp : "GET /static/admin/css/fonts.css HTTP/1.1" 304 0
+[2023-05-06 00:04:06,110] [INFO] basehttp : "GET /static/admin/fonts/Roboto-Light-webfont.woff HTTP/1.1" 304 0
+[2023-05-06 00:04:06,118] [INFO] basehttp : "GET /static/admin/fonts/Roboto-Bold-webfont.woff HTTP/1.1" 304 0
+[2023-05-06 00:04:06,118] [INFO] basehttp : "GET /static/admin/fonts/Roboto-Regular-webfont.woff HTTP/1.1" 304 0
+[2023-05-06 00:04:06,110] [INFO] basehttp : "GET /static/admin/fonts/Roboto-Light-webfont.woff HTTP/1.1" 304 0
+[2023-05-06 00:04:06,118] [INFO] basehttp : "GET /static/admin/fonts/Roboto-Bold-webfont.woff HTTP/1.1" 304 0
+[2023-05-06 00:04:06,118] [INFO] basehttp : "GET /static/admin/fonts/Roboto-Regular-webfont.woff HTTP/1.1" 304 0
+[2023-05-06 00:04:13,466] [INFO] basehttp : "POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+[2023-05-06 00:04:13,466] [INFO] basehttp : "POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+[2023-05-06 00:04:14,018] [INFO] basehttp : "GET /admin/ HTTP/1.1" 200 6681
+[2023-05-06 00:04:14,018] [INFO] basehttp : "GET /admin/ HTTP/1.1" 200 6681
+[2023-05-06 00:04:14,526] [INFO] basehttp : "GET /static/admin/css/dashboard.css HTTP/1.1" 304 0
+[2023-05-06 00:04:14,526] [INFO] basehttp : "GET /static/admin/css/dashboard.css HTTP/1.1" 304 0
+[2023-05-06 00:04:15,000] [INFO] basehttp : "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 304 0
+[2023-05-06 00:04:15,008] [INFO] basehttp : "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 304 0
+[2023-05-06 00:04:15,000] [INFO] basehttp : "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 304 0
+[2023-05-06 00:04:15,008] [INFO] basehttp : "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 304 0
+[2023-05-06 00:04:26,055] [INFO] basehttp : "GET /admin/auth/user/ HTTP/1.1" 200 6792
+[2023-05-06 00:04:26,055] [INFO] basehttp : "GET /admin/auth/user/ HTTP/1.1" 200 6792
+[2023-05-06 00:04:26,284] [INFO] basehttp : "GET /static/admin/css/changelists.css HTTP/1.1" 304 0
+[2023-05-06 00:04:26,284] [INFO] basehttp : "GET /static/admin/css/changelists.css HTTP/1.1" 304 0
+[2023-05-06 00:04:26,364] [INFO] basehttp : "GET /static/admin/js/core.js HTTP/1.1" 304 0
+[2023-05-06 00:04:26,364] [INFO] basehttp : "GET /static/admin/js/core.js HTTP/1.1" 304 0
+[2023-05-06 00:04:26,404] [INFO] basehttp : "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 304 0
+[2023-05-06 00:04:26,404] [INFO] basehttp : "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 304 0
+[2023-05-06 00:04:26,500] [INFO] basehttp : "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 304 0
+[2023-05-06 00:04:26,624] [INFO] basehttp : "GET /static/admin/js/actions.js HTTP/1.1" 304 0
+[2023-05-06 00:04:26,500] [INFO] basehttp : "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 304 0
+[2023-05-06 00:04:26,624] [INFO] basehttp : "GET /static/admin/js/actions.js HTTP/1.1" 304 0
+[2023-05-06 00:04:26,752] [INFO] basehttp : "GET /static/admin/js/urlify.js HTTP/1.1" 304 0
+[2023-05-06 00:04:26,752] [INFO] basehttp : "GET /static/admin/js/urlify.js HTTP/1.1" 304 0
+[2023-05-06 00:04:26,840] [INFO] basehttp : "GET /static/admin/js/prepopulate.js HTTP/1.1" 304 0
+[2023-05-06 00:04:26,840] [INFO] basehttp : "GET /static/admin/js/prepopulate.js HTTP/1.1" 304 0
+[2023-05-06 00:04:26,880] [INFO] basehttp : "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 304 0
+[2023-05-06 00:04:26,880] [INFO] basehttp : "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 304 0
+[2023-05-06 00:04:26,968] [INFO] basehttp : "GET /static/admin/js/jquery.init.js HTTP/1.1" 304 0
+[2023-05-06 00:04:26,968] [INFO] basehttp : "GET /static/admin/js/jquery.init.js HTTP/1.1" 304 0
+[2023-05-06 00:04:27,088] [INFO] basehttp : "GET /admin/jsi18n/ HTTP/1.1" 200 3189
+[2023-05-06 00:04:27,088] [INFO] basehttp : "GET /admin/jsi18n/ HTTP/1.1" 200 3189
+[2023-05-06 00:04:27,304] [INFO] basehttp : "GET /static/admin/img/search.svg HTTP/1.1" 304 0
+[2023-05-06 00:04:27,304] [INFO] basehttp : "GET /static/admin/img/search.svg HTTP/1.1" 304 0
+[2023-05-06 00:04:27,416] [INFO] basehttp : "GET /static/admin/img/icon-yes.svg HTTP/1.1" 304 0
+[2023-05-06 00:04:27,416] [INFO] basehttp : "GET /static/admin/img/icon-yes.svg HTTP/1.1" 304 0
+[2023-05-06 00:04:27,725] [INFO] basehttp : "GET /static/admin/img/icon-no.svg HTTP/1.1" 304 0
+[2023-05-06 00:04:27,725] [INFO] basehttp : "GET /static/admin/img/tooltag-add.svg HTTP/1.1" 304 0
+[2023-05-06 00:04:27,741] [INFO] basehttp : "GET /static/admin/img/sorting-icons.svg HTTP/1.1" 304 0
+[2023-05-06 00:04:27,725] [INFO] basehttp : "GET /static/admin/img/icon-no.svg HTTP/1.1" 304 0
+[2023-05-06 00:04:27,725] [INFO] basehttp : "GET /static/admin/img/tooltag-add.svg HTTP/1.1" 304 0
+[2023-05-06 00:04:27,741] [INFO] basehttp : "GET /static/admin/img/sorting-icons.svg HTTP/1.1" 304 0
+[2023-05-06 00:04:52,197] [INFO] basehttp : "GET /admin/auth/user/1/change/ HTTP/1.1" 200 13779
+[2023-05-06 00:04:52,197] [INFO] basehttp : "GET /admin/auth/user/1/change/ HTTP/1.1" 200 13779
+[2023-05-06 00:04:52,396] [INFO] basehttp : "GET /static/admin/css/forms.css HTTP/1.1" 304 0
+[2023-05-06 00:04:52,396] [INFO] basehttp : "GET /static/admin/css/forms.css HTTP/1.1" 304 0
+[2023-05-06 00:04:52,520] [INFO] basehttp : "GET /admin/jsi18n/ HTTP/1.1" 200 3189
+[2023-05-06 00:04:52,520] [INFO] basehttp : "GET /admin/jsi18n/ HTTP/1.1" 200 3189
+[2023-05-06 00:04:52,578] [INFO] basehttp : "GET /static/admin/js/SelectBox.js HTTP/1.1" 304 0
+[2023-05-06 00:04:52,578] [INFO] basehttp : "GET /static/admin/js/SelectBox.js HTTP/1.1" 304 0
+[2023-05-06 00:04:52,642] [INFO] basehttp : "GET /static/admin/js/SelectFilter2.js HTTP/1.1" 304 0
+[2023-05-06 00:04:52,642] [INFO] basehttp : "GET /static/admin/js/SelectFilter2.js HTTP/1.1" 304 0
+[2023-05-06 00:04:52,690] [INFO] basehttp : "GET /static/admin/js/calendar.js HTTP/1.1" 304 0
+[2023-05-06 00:04:52,698] [INFO] basehttp : "GET /static/admin/js/admin/DateTimeShortcuts.js HTTP/1.1" 304 0
+[2023-05-06 00:04:52,698] [INFO] basehttp : "GET /static/admin/css/widgets.css HTTP/1.1" 304 0
+[2023-05-06 00:04:52,690] [INFO] basehttp : "GET /static/admin/js/calendar.js HTTP/1.1" 304 0
+[2023-05-06 00:04:52,698] [INFO] basehttp : "GET /static/admin/css/widgets.css HTTP/1.1" 304 0
+[2023-05-06 00:04:52,698] [INFO] basehttp : "GET /static/admin/js/admin/DateTimeShortcuts.js HTTP/1.1" 304 0
+[2023-05-06 00:04:52,850] [INFO] basehttp : "GET /static/admin/js/change_form.js HTTP/1.1" 304 0
+[2023-05-06 00:04:52,850] [INFO] basehttp : "GET /static/admin/js/change_form.js HTTP/1.1" 304 0
+[2023-05-06 00:04:53,082] [INFO] basehttp : "GET /static/admin/js/prepopulate_init.js HTTP/1.1" 304 0
+[2023-05-06 00:04:53,082] [INFO] basehttp : "GET /static/admin/js/prepopulate_init.js HTTP/1.1" 304 0
+[2023-05-06 00:04:53,515] [INFO] basehttp : "GET /static/admin/img/icon-unknown.svg HTTP/1.1" 304 0
+[2023-05-06 00:04:53,532] [INFO] basehttp : "GET /static/admin/img/icon-unknown-alt.svg HTTP/1.1" 304 0
+[2023-05-06 00:04:53,540] [INFO] basehttp : "GET /static/admin/img/selector-icons.svg HTTP/1.1" 304 0
+[2023-05-06 00:04:53,515] [INFO] basehttp : "GET /static/admin/img/icon-unknown.svg HTTP/1.1" 304 0
+[2023-05-06 00:04:53,532] [INFO] basehttp : "GET /static/admin/img/icon-unknown-alt.svg HTTP/1.1" 304 0
+[2023-05-06 00:04:53,582] [INFO] basehttp : "GET /static/admin/img/icon-calendar.svg HTTP/1.1" 304 0
+[2023-05-06 00:04:53,540] [INFO] basehttp : "GET /static/admin/img/selector-icons.svg HTTP/1.1" 304 0
+[2023-05-06 00:04:53,582] [INFO] basehttp : "GET /static/admin/img/icon-calendar.svg HTTP/1.1" 304 0
+[2023-05-06 00:04:53,616] [INFO] basehttp : "GET /static/admin/img/icon-clock.svg HTTP/1.1" 304 0
+[2023-05-06 00:04:53,616] [INFO] basehttp : "GET /static/admin/img/icon-clock.svg HTTP/1.1" 304 0
+[2023-05-06 00:05:05,694] [INFO] basehttp : "GET /admin/auth/user/1/delete/ HTTP/1.1" 200 3655
+[2023-05-06 00:05:05,718] [INFO] basehttp : "GET /static/admin/js/cancel.js HTTP/1.1" 304 0
+[2023-05-06 00:05:05,694] [INFO] basehttp : "GET /admin/auth/user/1/delete/ HTTP/1.1" 200 3655
+[2023-05-06 00:05:05,718] [INFO] basehttp : "GET /static/admin/js/cancel.js HTTP/1.1" 304 0
+[2023-05-06 00:05:16,195] [INFO] basehttp : "GET /admin/auth/user/1/change/ HTTP/1.1" 200 13779
+[2023-05-06 00:05:16,195] [INFO] basehttp : "GET /admin/auth/user/1/change/ HTTP/1.1" 200 13779
+[2023-05-06 00:20:37,416] [INFO] basehttp : "POST /login_action/ HTTP/1.1" 302 0
+[2023-05-06 00:20:37,416] [INFO] basehttp : "POST /login_action/ HTTP/1.1" 302 0
+[2023-05-06 00:20:37,504] [INFO] basehttp : "GET /event_manage/ HTTP/1.1" 200 5271
+[2023-05-06 00:20:37,504] [INFO] basehttp : "GET /event_manage/ HTTP/1.1" 200 5271
+[2023-05-06 00:20:41,118] [INFO] basehttp : "GET /sign_index/1/ HTTP/1.1" 200 2823
+[2023-05-06 00:20:41,118] [INFO] basehttp : "GET /sign_index/1/ HTTP/1.1" 200 2823
+[2023-05-06 00:20:47,565] [INFO] basehttp : "POST /sign_index_action/1/ HTTP/1.1" 200 2840
+[2023-05-06 00:20:47,565] [INFO] basehttp : "POST /sign_index_action/1/ HTTP/1.1" 200 2840
+[2023-05-06 00:20:50,988] [INFO] basehttp : "POST /sign_index_action/1/ HTTP/1.1" 200 2847
+[2023-05-06 00:20:50,988] [INFO] basehttp : "POST /sign_index_action/1/ HTTP/1.1" 200 2847
+[2023-05-06 00:21:00,275] [ERROR] exception : Internal Server Error: /sign_index2/1/
+Traceback (most recent call last):
+  File "D:\Program Files\Python\Python35\lib\site-packages\django\core\handlers\exception.py", line 39, in inner
+    response = get_response(request)
+  File "D:\Program Files\Python\Python35\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\Program Files\Python\Python35\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+TypeError: sign_index2() got an unexpected keyword argument 'event_id'
+[2023-05-06 00:21:00,275] [ERROR] exception : Internal Server Error: /sign_index2/1/
+Traceback (most recent call last):
+  File "D:\Program Files\Python\Python35\lib\site-packages\django\core\handlers\exception.py", line 39, in inner
+    response = get_response(request)
+  File "D:\Program Files\Python\Python35\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\Program Files\Python\Python35\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+TypeError: sign_index2() got an unexpected keyword argument 'event_id'
+[2023-05-06 00:21:00,601] [ERROR] basehttp : "GET /sign_index2/1/ HTTP/1.1" 500 65069
+[2023-05-06 00:21:00,601] [ERROR] basehttp : "GET /sign_index2/1/ HTTP/1.1" 500 65069
+[2023-05-06 00:21:18,419] [INFO] basehttp : "GET /guest_manage/ HTTP/1.1" 200 4642
+[2023-05-06 00:21:18,419] [INFO] basehttp : "GET /guest_manage/ HTTP/1.1" 200 4642
+[2023-05-06 00:21:21,699] [INFO] basehttp : "GET /event_manage/ HTTP/1.1" 200 5271
+[2023-05-06 00:21:21,699] [INFO] basehttp : "GET /event_manage/ HTTP/1.1" 200 5271

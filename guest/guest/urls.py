@@ -10,7 +10,7 @@ Including another URLconf
     1. Import the include() function: from django.conf.urls import url, include
     2. Add a URL to urlpatterns:  url(r'^blog/', include('blog.urls'))
 """
-from django.conf.urls import url
+from django.conf.urls import url,include
 from django.contrib import admin
 from sign import views #导入sign应用views文件
 
@@ -28,4 +28,5 @@ urlpatterns = [
     url(r'^sign_index2/(?P<event_id>[0-9]+)/$', views.sign_index2),
     url(r'^sign_index_action/(?P<eid>[0-9]+)/$',views.sign_index_action),
     url(r'^logout/$',views.logout),
+    url(r'^api/',include('sign.urls',namespace="sign"))
 ]

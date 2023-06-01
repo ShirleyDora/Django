@@ -14,3 +14,59 @@ Installing collected packages: pymysql
 Successfully installed pymysql-0.10.0
 You are using pip version 8.1.1, however version 23.1.2 is available.
 You should consider upgrading via the 'python -m pip install --upgrade pip' command.
+
+E:\django>pip install robotframework
+Collecting robotframework
+  Downloading https://files.pythonhosted.org/packages/72/26/5a391509c611bda444e73228a89694accac1f1e6e84c11964ba163b81b1a/robotframework-6.0.2-py3-none-any.whl (658kB)
+    100% |████████████████████████████████| 665kB 17kB/s
+Installing collected packages: robotframework
+Successfully installed robotframework-6.0.2
+You are using pip version 8.1.1, however version 23.1.2 is available.
+You should consider upgrading via the 'python -m pip install --upgrade pip' command.
+
+E:\django>pip install robotframework-requests
+Collecting robotframework-requests
+  Downloading https://files.pythonhosted.org/packages/f5/ae/0f03ce6c0b35d904847ec56543edbcfdb92569a504a8b9a19c92454f8fe6/robotframework_requests-0.9.4-py3-none-any.whl
+Collecting requests (from robotframework-requests)
+  Using cached https://files.pythonhosted.org/packages/96/80/034ffeca15c0f4e01b7b9c6ad0fb704b44e190cde4e757edbd60be404c41/requests-2.30.0-py3-none-any.whl
+Requirement already satisfied (use --upgrade to upgrade): robotframework in d:\program files\python\python35\lib\site-packages (from robotframework-requests)
+Collecting urllib3<3,>=1.21.1 (from requests->robotframework-requests)
+  Cache entry deserialization failed, entry ignored
+  Downloading https://files.pythonhosted.org/packages/4b/1d/f8383ef593114755429c307449e7717b87044b3bcd5f7860b89b1f759e34/urllib3-2.0.2-py3-none-any.whl (123kB)
+    100% |████████████████████████████████| 133kB 164kB/s
+Collecting charset-normalizer<4,>=2 (from requests->robotframework-requests)
+  Using cached https://files.pythonhosted.org/packages/ef/81/14b3b8f01ddaddad6cdec97f2f599aa2fa466bd5ee9af99b08b7713ccd29/charset_normalizer-3.1.0-py3-none-any.whl
+Collecting certifi>=2017.4.17 (from requests->robotframework-requests)
+  Cache entry deserialization failed, entry ignored
+  Downloading https://files.pythonhosted.org/packages/71/4c/3db2b8021bd6f2f0ceb0e088d6b2d49147671f25832fb17970e9b583d742/certifi-2022.12.7-py3-none-any.whl (155kB)
+    100% |████████████████████████████████| 163kB 26kB/s
+Collecting idna<4,>=2.5 (from requests->robotframework-requests)
+  Using cached https://files.pythonhosted.org/packages/fc/34/3030de6f1370931b9dbb4dad48f6ab1015ab1d32447850b9fc94e60097be/idna-3.4-py3-none-any.whl
+Installing collected packages: urllib3, charset-normalizer, certifi, idna, requests, robotframework-requests
+Successfully installed certifi-2022.12.7 charset-normalizer-3.1.0 idna-3.4 requests-2.30.0 robotframework-requests-0.9.4 urllib3-2.0.2
+You are using pip version 8.1.1, however version 23.1.2 is available.
+You should consider upgrading via the 'python -m pip install --upgrade pip' command.
+
+E:\django>pip install requests
+Collecting requests
+  Downloading https://files.pythonhosted.org/packages/96/80/034ffeca15c0f4e01b7b9c6ad0fb704b44e190cde4e757edbd60be404c41/requests-2.30.0-py3-none-any.whl (62kB)
+    100% |████████████████████████████████| 71kB 101kB/s
+Collecting idna<4,>=2.5 (from requests)
+  Cache entry deserialization failed, entry ignored
+  Downloading https://files.pythonhosted.org/packages/fc/34/3030de6f1370931b9dbb4dad48f6ab1015ab1d32447850b9fc94e60097be/idna-3.4-py3-none-any.whl (61kB)
+    100% |████████████████████████████████| 71kB 6.5kB/s
+Collecting charset-normalizer<4,>=2 (from requests)
+  Retrying (Retry(total=4, connect=None, read=None, redirect=None)) after connection broken by 'ReadTimeoutError("HTTPSConnectionPool(host='pypi.python.org', port=443): Read timed out. (read timeout=15)",)': /simple/charset-normalizer/
+  Cache entry deserialization failed, entry ignored
+  Downloading https://files.pythonhosted.org/packages/ef/81/14b3b8f01ddaddad6cdec97f2f599aa2fa466bd5ee9af99b08b7713ccd29/charset_normalizer-3.1.0-py3-none-any.whl (46kB)
+    100% |████████████████████████████████| 51kB 29kB/s
+Collecting urllib3<3,>=1.21.1 (from requests)
+  Retrying (Retry(total=4, connect=None, read=None, redirect=None)) after connection broken by 'ConnectTimeoutError(<pip._vendor.requests.packages.urllib3.connection.VerifiedHTTPSConnection object at 0x000002778354FDD8>, 'Connection to pypi.python.org timed out. (connect timeout=15)')': /simple/urllib3/
+  Using cached https://files.pythonhosted.org/packages/4b/1d/f8383ef593114755429c307449e7717b87044b3bcd5f7860b89b1f759e34/urllib3-2.0.2-py3-none-any.whl
+Collecting certifi>=2017.4.17 (from requests)
+  Downloading https://files.pythonhosted.org/packages/71/4c/3db2b8021bd6f2f0ceb0e088d6b2d49147671f25832fb17970e9b583d742/certifi-2022.12.7-py3-none-any.whl (155kB)
+    100% |████████████████████████████████| 163kB 30kB/s
+Installing collected packages: idna, charset-normalizer, urllib3, certifi, requests
+Successfully installed certifi-2022.12.7 charset-normalizer-3.1.0 idna-3.4 requests-2.30.0 urllib3-2.0.2
+You are using pip version 8.1.1, however version 23.1.2 is available.
+You should consider upgrading via the 'python -m pip install --upgrade pip' command.
