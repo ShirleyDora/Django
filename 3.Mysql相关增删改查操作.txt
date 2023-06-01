@@ -1,3 +1,13 @@
+一、基本的增删改查：
+1.create database 库名 创建数据库
+2.drop database 库名 删除数据库
+3.use 库名 使用数据库
+4.create table 表名 创建表
+5.insert into 表名(字段1，字段2...) values(数据1，数据2，...),向表中插入数据
+6.update 表名 set 字段1，字段2... where 条件 向表中更新数据
+7.delete from 表名 where 条件 删除表中数据
+8.select 列名 from 数据表名 where 查询条件 group by 分组字段 having 分组后的约束条件 order by 排序字段 limit 限制输出行数。查找表中数据
+二、详情：
 E:\django>mysql -u root -p
 Enter password: ******
 Welcome to the MySQL monitor.  Commands end with ; or \g.
